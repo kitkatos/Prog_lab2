@@ -1,0 +1,132 @@
+@startuml
+skin rose
+class Pokemon {
+}
+
+class Volbeat {
+    + Volbeat(name: String,lvl: int)
+}
+
+class Lickitung {
+    + Lickitung(name: String,lvl: int)
+}
+
+class Lotad {
+    + Lotad(name: String,lvl: int)
+}
+
+class Lickilicky {
+    + Lickilicky(name: String,lvl: int)
+}
+
+class Lombre {
+    + Lombre(name: String,lvl: int)
+}
+
+class Ludicolo {
+    + Ludicolo(name: String,lvl: int)
+}
+
+
+Pokemon --> Volbeat
+Pokemon --> Lickitung
+Pokemon --> Lotad
+Lickitung --> Lickilicky
+Lotad --> Lombre
+Lombre --> Ludicolo
+
+class Move {
+}
+
+class PhysicalMove {
+}
+
+class SpecialMove {
+}
+
+class StatusMoveMove {
+}
+
+class Main {
+}
+class DamageMove{
+}
+
+
+
+
+
+
+
+Move --> DamageMove
+DamageMove --> PhysicalMove
+DamageMove --> SpecialMove
+Move --> StatusMove
+
+class Confide {
+    + Confide()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class Thunder {
+    + Thunder()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class SignalBeam {
+    + SignalBeam()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class RockTomb {
+    + RockTomb()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class Flamethrower {
+    + Flamethrower()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class Supersonic {
+    + Supersonic()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class FocusBlast {
+    + FocusBlast()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class IceBeam {
+    + IceBeam()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class Facade {
+    + Facade()
+    + describe():String
+}
+class BubbleBeam {
+    + BubbleBeam()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+class Astonish {
+    + Astonish()
+    + applyOppEffects(Pokemon): void
+    + describe():String
+}
+
+PhysicalMove --> Astonish
+PhysicalMove --> Facade
+PhysicalMove --> RockTomb
+SpecialMove --> Bubble_beam
+SpecialMove --> Flamethrower
+SpecialMove --> FocusBlast
+SpecialMove --> IceBeam
+SpecialMove --> SignalBeam
+SpecialMove --> Thunder
+StatusMove --> Confide
+StatusMove --> Supersonic
+@enduml
